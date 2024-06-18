@@ -1,0 +1,22 @@
+# see https://docs.searxng.org/admin/settings/settings.html#settings-use-default-settings
+use_default_settings: true
+server:
+  # base_url is defined in the SEARXNG_BASE_URL environment variable, see .env and docker-compose.yml
+  secret_key: "change this" # change this!
+  limiter: true  # can be disabled for a private instance
+  image_proxy: true
+ui:
+  static_use_hash: true
+redis:
+  url: redis://redis:6379/0
+general:
+  debug: false
+  instance_name: "stormy's search"
+  privacypolicy_url: false
+  donation_url: true
+# https://paypal.me/stormyark?country.x=DE&locale.x=de_DE
+  contact_url: false
+  enable_metrics: true
+search:
+  safe_search: 0
+  autocomplete: "google"
