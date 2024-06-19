@@ -1,0 +1,57 @@
+services:
+  littlelink:
+    image: ghcr.io/techno-tim/littlelink-server:latest
+    # dockerhub is also supported timothystewart6/littlelink-server
+    # image: timothystewart6/littlelink-server:latest
+    container_name: littlelink
+    environment:
+      - META_TITLE=stormyark links
+      - META_DESCRIPTION=Computer science lover | Gamer | Homelab
+      - META_AUTHOR=stormyark
+      - META_KEYWORDS=HomeLab, HTML, CSS, Engineering
+      - LANG=en
+      - META_INDEX_STATUS=all
+      - OG_SITE_NAME=stormyark
+      - OG_TITLE=stormyark
+      - OG_DESCRIPTION=The home of stormyark
+      - OG_URL=https://stormyark.de
+      - OG_IMAGE=https://www.stormyark.de/xstormy.webp.pagespeed.ic.iouXpVZX3p.webp
+      - OG_IMAGE_WIDTH=400
+      - OG_IMAGE_HEIGHT=400
+      - GA_TRACKING_ID=G-XXXXXXXXXX
+      - THEME=Dark
+      - FAVICON_URL=https://www.stormyark.de/xstormy.webp.pagespeed.ic.iouXpVZX3p.webp
+      - AVATAR_URL=https://www.stormyark.de/xstormy.webp.pagespeed.ic.iouXpVZX3p.webp
+      - AVATAR_2X_URL=https://www.stormyark.de/xstormy.webp.pagespeed.ic.iouXpVZX3p.webp
+      - AVATAR_ALT=Techno Tim Profile Pic
+      - NAME=stormyark
+      #- BIO=Software Engineer | Gamer | Homelab
+      # use ENV variable names for order, listed buttons will be boosted to the top
+      - BUTTON_ORDER=INSTAGRAM,DISCORD,SPOTIFY,STEAM,GITHUB,YOUTUBE
+      # you can render an unlimited amount of custom buttons by adding 
+      # the CUSTOM_BUTTON_* variables and by using a comma as a separator.
+      #- CUSTOM_BUTTON_TEXT=Documentation,Recommended Gear
+      #- CUSTOM_BUTTON_URL=https://l.stormyatk.live/docs,https://l.stormyatk.live/gear
+      #- CUSTOM_BUTTON_COLOR=#000000,#000000
+      #- CUSTOM_BUTTON_TEXT_COLOR=#ffffff,#ffffff
+      #- CUSTOM_BUTTON_ALT_TEXT=Tech documentation site for my videos and more,Recommended Gear
+      #- CUSTOM_BUTTON_NAME=DOCUMENTATION,GEAR
+      #- CUSTOM_BUTTON_ICON=fas file-alt,fas fa-cog
+      - GITHUB=https://github.com/stormyark
+      - INSTAGRAM=https://www.instagram.com/stormyark/
+      - YOUTUBE=https://www.youtube.com/@stormyark
+      - DISCORD=https://discord.com/users/755535092910129172
+      - STEAM=https://steamcommunity.com/id/stormyark/
+      - SPOTIFY=https://open.spotify.com/user/d9dqjch7gfk4gq40rq9s5jzny?si=e2f1c75264404e74&nd=1&dlsi=7617893550624038
+      #- FOOTER=stormyark © 2024
+    ports:
+      - 3000:3000
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - intranet
+
+networks:
+  intranet:
+    external: true
