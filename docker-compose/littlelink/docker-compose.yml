@@ -6,7 +6,7 @@ services:
     container_name: littlelink
     environment:
       - META_TITLE=stormyark links
-      - META_DESCRIPTION=Computer science lover | Gamer | Homelab
+      - META_DESCRIPTION=Computer science lover | Gamer | Homelaber
       - META_AUTHOR=stormyark
       - META_KEYWORDS=HomeLab, HTML, CSS, Engineering
       - LANG=en
@@ -15,15 +15,15 @@ services:
       - OG_TITLE=stormyark
       - OG_DESCRIPTION=The home of stormyark
       - OG_URL=https://stormyark.de
-      - OG_IMAGE=https://www.stormyark.de/xstormy.webp.pagespeed.ic.iouXpVZX3p.webp
-      - OG_IMAGE_WIDTH=400
-      - OG_IMAGE_HEIGHT=400
+      - OG_IMAGE=https://www.stormyark.de/stormy.webp
+      - OG_IMAGE_WIDTH=500
+      - OG_IMAGE_HEIGHT=500
       - GA_TRACKING_ID=G-XXXXXXXXXX
       - THEME=Dark
-      - FAVICON_URL=https://www.stormyark.de/xstormy.webp.pagespeed.ic.iouXpVZX3p.webp
-      - AVATAR_URL=https://www.stormyark.de/xstormy.webp.pagespeed.ic.iouXpVZX3p.webp
-      - AVATAR_2X_URL=https://www.stormyark.de/xstormy.webp.pagespeed.ic.iouXpVZX3p.webp
-      - AVATAR_ALT=Techno Tim Profile Pic
+      - FAVICON_URL=https://www.stormyark.de/stormy.webp
+      - AVATAR_URL=https://www.stormyark.de/stormy.webp
+      - AVATAR_2X_URL=https://www.stormyark.de/stormy.webp
+      - AVATAR_ALT=stormyark profile picture
       - NAME=stormyark
       #- BIO=Software Engineer | Gamer | Homelab
       # use ENV variable names for order, listed buttons will be boosted to the top
@@ -44,8 +44,8 @@ services:
       - STEAM=https://steamcommunity.com/id/stormyark/
       - SPOTIFY=https://open.spotify.com/user/d9dqjch7gfk4gq40rq9s5jzny?si=e2f1c75264404e74&nd=1&dlsi=7617893550624038
       #- FOOTER=stormyark © 2024
-    ports:
-      - 3000:3000
+    #ports:
+      #- 3000:3000
     restart: unless-stopped
     security_opt:
       - no-new-privileges:true
